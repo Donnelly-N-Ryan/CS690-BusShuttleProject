@@ -95,6 +95,29 @@ public class ConsoleUI {
                     var result = Reporter.FindBusiestStop(dataManager.PassengerData);
                     Console.WriteLine("The busiest stop is: "+result.Name);
                 }
+                else if(command=="add driver"){
+                  //  var newDriverName = AnsiConsole.Prompt(new TextPrompt<string>("Enter new driver name:"));
+                  //TODO
+                }
+                else if(command=="remove driver)"){
+                    //TODO
+                    """Stop selectedStop = AnsiConsole.Prompt(
+				            new SelectionPrompt<Stop>()
+				                .Title("Select a stop")
+				                .AddChoices(dataManager.Stops));
+                    dataManager.RemoveStop(selectedStop);"""
+                }
+                else if(command=="list drivers)"){
+                    //TODO
+                    """var table = new Table();
+
+                    table.AddColumn("Stop Name");
+
+                    foreach(var stop in dataManager.Stops) {
+                        table.AddRow(stop.Name);
+                    }
+                    AnsiConsole.Write(table);"""
+                }
 
 
             } while(command!="end");
